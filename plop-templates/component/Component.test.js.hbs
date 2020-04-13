@@ -1,0 +1,12 @@
+import React from 'react';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
+import {{pascalCase name}} from './{{pascalCase name}}.component';
+
+const {{camelCase name}}Props = {};
+
+test('shows {{pascalCase name}} with correct content', () => {
+  const { getByText } = render(<{{pascalCase name}} {...{{camelCase name}}Props} />);
+
+  expect(getByText('{{pascalCase name}} component')).toBeInTheDocument();
+});

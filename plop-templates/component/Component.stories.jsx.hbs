@@ -1,0 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
+import {{pascalCase name}} from './{{pascalCase name}}.component';
+
+const StoryContainer = styled.div`
+  margin: 20px;
+`;
+
+const storyConfig = {
+  title: '{{pascalCase name}}',
+  component: {{pascalCase name}},
+  decorators: [(storyFn) => <StoryContainer>{storyFn()}</StoryContainer>],
+};
+
+const {{camelCase name}} = () => <{{pascalCase name}} />;
+
+export { {{camelCase name}} };
+
+export default storyConfig;

@@ -1,0 +1,23 @@
+import React from 'react';
+import { string } from 'prop-types';
+import getTestIdLocator from '@utils/locator';
+import { {{pascalCase name}}Container } from './{{pascalCase name}}.styled';
+
+const get{{pascalCase name}}Locator = getTestIdLocator('{{dashCase name}}');
+
+/**
+ * {{pascalCase name}} component
+ */
+const {{pascalCase name}}Component = ({ content }) => {
+  return <{{pascalCase name}}Container data-testid={get{{pascalCase name}}Locator('container')}>{content}</{{pascalCase name}}Container>;
+};
+
+{{pascalCase name}}Component.propTypes = {
+  content: string,
+};
+
+{{pascalCase name}}Component.defaultProps = {
+  content: '{{pascalCase name}} component',
+};
+
+export default {{pascalCase name}}Component;
