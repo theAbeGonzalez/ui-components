@@ -1,11 +1,13 @@
 const theme = {
-  primary: {
+  background: {
     white: '#FFFFFF',
     black: '#000000',
   },
   accents: {
-    lighter: '#EAEAEA',
-    darkest: '#666666',
+    one: '#FAFAFA',
+    two: '#EAEAEA',
+    five: '#666666',
+    seven: '#333333',
   },
 };
 

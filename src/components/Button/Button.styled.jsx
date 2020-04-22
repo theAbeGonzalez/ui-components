@@ -9,20 +9,37 @@ const Button = styled.button`
   cursor: pointer;
   user-select: none;
   outline: none;
-  justify-content: center;
   text-transform: uppercase;
   text-align: center;
   height: 2.71rem;
-  line-height: 2.71rem;
-  width: auto;
   min-width: 14.28rem;
-  white-space: nowrap;
-  transition: border 0.2s, background 0.2s, color 0.2s ease-out;
-  position: relative;
+  background: ${({ theme }) => theme.background.black};
+  border: 1px solid ${({ theme }) => theme.accents.two};
+  color: ${({ theme }) => theme.background.white};
   overflow: hidden;
-  background: ${({ theme }) => theme.primary.white};
-  border: 1px solid ${({ theme }) => theme.accents.lighter};
-  color: ${({ theme }) => theme.accents.darkest};
+  position: relative;
+
+  &:hover {
+    background: ${({ theme }) => theme.background.white};
+    color: ${({ theme }) => theme.background.black};
+    border: 1px solid ${({ theme }) => theme.background.black};
+  }
 `;
 
-export { Button };
+const Ripple = styled.div`
+  ${({ y, x, size }) => `top: ${y}px; left: ${x}px; height: ${size}px; width: ${size}px; `}
+  transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.75;
+  background-color: ${({ theme }) => theme.accents.five};
+  animation: ripple 1000ms;
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+`;
+
+export { Button, Ripple };
