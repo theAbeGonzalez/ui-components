@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions';
 import Button from './Button.component';
 
 const StoryContainer = styled.div`
-  width: 220px;
   button {
     margin: 5px;
   }
@@ -22,5 +21,17 @@ const buttonProps = {
 
 const primary = () => <Button {...buttonProps}>Default</Button>;
 
-export { primary };
+const disabled = () => (
+  <Button disabled {...buttonProps}>
+    Default
+  </Button>
+);
+
+const loading = () => (
+  <Button loading {...buttonProps}>
+    Default
+  </Button>
+);
+
+export { primary, disabled, loading };
 export default storyConfig;
