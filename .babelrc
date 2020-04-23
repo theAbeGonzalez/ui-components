@@ -5,6 +5,7 @@
       "alias": {
         "@utils": "./src/utils",
         "@themes": "./src/themes",
+        "@components": "./src/components",
       }
     }]
   ]
